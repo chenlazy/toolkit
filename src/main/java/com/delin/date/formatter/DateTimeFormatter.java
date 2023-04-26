@@ -35,24 +35,7 @@ public class DateTimeFormatter {
      */
     public static String formatToChineseDateStr(LocalDateTime localDateTime, boolean isUpperCase){
         Objects.requireNonNull(localDateTime, "localDateTime");
-        if(isUpperCase){
-            StringBuilder buf = new StringBuilder();
-            //年
-            String year = String.valueOf(localDateTime.getYear());
-            int yearLength = year.length();
-            for(int i=0; i<yearLength; i++){
-                buf.append(ChineseDateDigitEnum.ENUMS[year.charAt(i)-48].getChineseDigit());
-            }
-            buf.append("年");
-            //月
-            buf.append(ChineseDateDigitEnum.ENUMS[localDateTime.getMonthValue()].getChineseDigit());
-            buf.append("月");
-            //日
-            buf.append(ChineseDateDigitEnum.ENUMS[localDateTime.getDayOfMonth()].getChineseDigit());
-            buf.append("日");
-            return buf.toString();
-        }else{
-            return format(localDateTime, YYYY_MM_DD_CN_FMT);
-        }
+
+        return null;
     }
 }

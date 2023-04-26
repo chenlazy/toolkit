@@ -76,14 +76,14 @@ public class DateTimeConverter {
         return LocalDateTime.ofInstant(Instant.ofEpochMilli(epochMilli), ZoneId.systemDefault());
     }
 
-    /**
+  /*  *//**
      * temporal转LocalDateTime
      * @param temporal TemporalAccessor
      * @return LocalDateTime
-     */
+     *//*
     public static LocalDateTime toLocalDateTime(TemporalAccessor temporal) {
         return toLocalDateTime(toZonedDateTime(temporal));
-    }
+    }*/
 
     /**
      * ZonedDateTime转LocalDateTime
@@ -101,10 +101,10 @@ public class DateTimeConverter {
      * @param temporal TemporalAccessor
      * @return 时间戳
      */
-    public static long toEpochMilli(TemporalAccessor temporal) {
+   /* public static long toEpochMilli(TemporalAccessor temporal) {
         return toEpochMilli(toZonedDateTime(temporal));
     }
-
+*/
     /**
      * Date转ZonedDateTime，时区为系统默认时区
      * @param date Date
@@ -170,11 +170,11 @@ public class DateTimeConverter {
      * @param targetZoneId 目标时区id
      * @return ZonedDateTime
      */
-    public static ZonedDateTime toZonedDateTimeAndTransformZone(LocalDateTime localDateTime, String targetZoneId) {
+  /*  public static ZonedDateTime toZonedDateTimeAndTransformZone(LocalDateTime localDateTime, String targetZoneId) {
         Objects.requireNonNull(localDateTime, "localDateTime");
         Objects.requireNonNull(targetZoneId, "targetZoneId");
         return DateTimeCalculatorUtil.transform(localDateTime.atZone(ZoneId.systemDefault()), targetZoneId);
-    }
+    }*/
 
     /**
      * LocalDate转ZonedDateTime，时区为系统默认时区
